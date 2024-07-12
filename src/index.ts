@@ -1,5 +1,4 @@
 import { registerPlugin } from '@capacitor/core';
-
 import type { PluginInfoPlugin } from './definitions';
 
 const PluginInfo = registerPlugin<PluginInfoPlugin>('PluginInfo', {

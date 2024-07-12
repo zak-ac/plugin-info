@@ -1,3 +1,10 @@
+export interface DeviceInfo {
+  imei: string;
+  phoneNumber: string;
+  simSerialNumber: string;
+  subscriberId: string;
+}
+
 export interface PluginInfoPlugin {
-  echo(options: { value: string }): Promise<{ value: string }>;
+  getDeviceInfo(): Promise<DeviceInfo>;
 }

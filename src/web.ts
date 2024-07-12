@@ -1,10 +1,8 @@
 import { WebPlugin } from '@capacitor/core';
-
-import type { PluginInfoPlugin } from './definitions';
+import type { PluginInfoPlugin, DeviceInfo } from './definitions';
 
 export class PluginInfoWeb extends WebPlugin implements PluginInfoPlugin {
-  async echo(options: { value: string }): Promise<{ value: string }> {
-    console.log('ECHO', options);
-    return options;
+  async getDeviceInfo(): Promise<DeviceInfo> {
+    throw this.unimplemented('Not implemented on web.');
   }
 }
